@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    div {
+        background-color: rgb(197, 208, 240);
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    div {
+        background-color: orange;
+    }
+}
+  
+
+body{
+    border: 2px solid black;
+   
+}
+
+header{
+    border: 2px solid red;
+    
+ 
+}
+.menu{
+    border: 2px solid yellow;
+    background-color: aqua; 
+    display: flex;
+
+}
+
+.logotipo{
+    border: 2px solid salmon;
+    width: 100px;
+    height: 100px;
+    overflow: visible;   
+    
+}
+
+.item-menu {
+    text-decoration:none;
+    padding: 2em;
+    border: 2px solid black;
+    
+}
+.grid-home{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'nosotros nosotros nosotros' 
+                        'venta posventa financiacion';
+}
+.grid-item  {
+    border:2px solid darkblue;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center;
+    
+}
+.grid-catalogo {
+    border: 2px solid fuchsia;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.grid-posventa{
+    display: flex;
+
+    /* grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'nosotros nosotros nosotros nosotros' 
+                        'posventa posventa posventa posventa ';*/
+}
+
+.item-home {
+    background-color:greenyellow;
+}
+
+
+.item-catalogo{
+    background-color: rgb(243, 42, 153);
+}
+
+.item-servicios{
+    background-color: lemonchiffon;
+}
+
+
+
+.nosotros{
+    grid-area: nosotros;
+    text-align: center;
+    margin: 0.5%;
+    padding: 0.3%;
+}
+
+/*.venta{
+    grid-area: venta;
+}
+.posventa{
+    grid-area: posventa;
+}
+.financiacion{
+    grid-area: financiacion;
+
+}*/
+
+
+.footer{
+    border: 2px solid slateblue;
+}
