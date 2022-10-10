@@ -1,55 +1,58 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: auto;
+    box-sizing: border-box;
 }
 
 
 
 @media screen and (min-width: 600px) {
-    div {
-        background-color: rgb(197, 208, 240);
-    }
+  
 
 }
 
 @media screen and (max-width: 800px) {
-    div {
-        background-color: orange;
-    }
+    
 }
   
 
 body{
-    border: 2px solid black;
-   
+    width: 100%; 
 }
 
 header{
-    border: 2px solid red;
-    
- 
+    width: 100%;
+    background-color: teal;
 }
-.menu{
-    border: 2px solid yellow;
-    background-color: aqua; 
+
+.nave{
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
 .logotipo{
     border: 2px solid salmon;
-    width: 100px;
-    height: 100px;
-    overflow: visible;   
-    
+    width: 10%;
+    background-image: url("./logoAC.png");
+}
+.img_logo{
+    width: 100%;
+}
+
+.menu{
+    width: 50%;
+    margin: 10px;
 }
 
 .item-menu {
     text-decoration:none;
-    padding: 2em;
-    border: 2px solid black;
-    
+}
+.item-menu:hover{
+    background-color: gold;
 }
 .grid-home{
     display: grid;
@@ -101,17 +104,6 @@ header{
     margin: 0.5%;
     padding: 0.3%;
 }
-
-/*.venta{
-    grid-area: venta;
-}
-.posventa{
-    grid-area: posventa;
-}
-.financiacion{
-    grid-area: financiacion;
-
-}*/
 
 
 .footer{
