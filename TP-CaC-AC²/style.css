@@ -103,8 +103,6 @@ header{
     background-color: lemonchiffon;
 }
 
-
-
 .nosotros{
     grid-area: nosotros;
     text-align: center;
@@ -112,6 +110,31 @@ header{
     padding: 0.3%;
 }
 
+.nosotros-titulo{
+    text-align: center;
+    width: 100%;
+    padding: 2%;
+}
+
+.contactenos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.formulario {
+    
+    width: 50%;
+    text-align: center;
+    padding: 2%;
+}
+
+.ubicacion{
+    width: 50%;
+    background-color: peachpuff;
+    border: solid 1px black;
+    padding: 10%;
+}
 
 .footer{
     border: 2px solid slateblue;
