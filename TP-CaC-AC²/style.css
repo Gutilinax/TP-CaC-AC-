@@ -45,11 +45,18 @@ header{
 
 .menu{
     width: 50%;
-    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .item-menu {
+    width: 100%;
     text-decoration:none;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 .item-menu:hover{
     background-color: gold;
