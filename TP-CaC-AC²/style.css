@@ -6,26 +6,21 @@
 
 
 
-@media screen and (min-width: 600px) {
-  
+@media screen and (min-width: 600px) {}
 
-}
+@media screen and (max-width: 800px) {}
 
-@media screen and (max-width: 800px) {
-    
-}
-  
 
-body{
-    width: 100%; 
-}
-
-header{
+body header main {
     width: 100%;
+}
+
+header {
+    
     background-color: teal;
 }
 
-.nave{
+.nave {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -34,16 +29,17 @@ header{
 
 }
 
-.logotipo{
+.logotipo {
     border: 2px solid salmon;
     width: 10%;
     background-image: url("./logoAC.png");
 }
-.img_logo{
+
+.img_logo {
     width: 100%;
 }
 
-.menu{
+.menu {
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -53,89 +49,135 @@ header{
 
 .item-menu {
     width: 100%;
-    text-decoration:none;
+    text-decoration: none;
     text-align: center;
     padding-top: 10%;
     padding-bottom: 10%;
 }
-.item-menu:hover{
+
+.item-menu:hover {
     background-color: gold;
 }
-.grid-home{
+
+.grid-home {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 'nosotros nosotros nosotros' 
+    grid-template-areas: 'nosotros nosotros nosotros'
                         'venta posventa financiacion';
 }
-.grid-item  {
-    border:2px solid darkblue;
+
+.grid-item {
+    border: 2px solid darkblue;
     border-radius: 20px;
     background-color: #fff;
     text-align: center;
-    
+
 }
+
 .grid-catalogo {
     border: 2px solid fuchsia;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
 }
-.grid-posventa{
-    display: flex;
 
-    /* grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 'nosotros nosotros nosotros nosotros' 
-                        'posventa posventa posventa posventa ';*/
+.posventa {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    
+    
+    
+}
+.aside{
+    
+    border: 2px solid rgb(9, 226, 74);
+      
+}
+
+.container-servicios{
+    
+    border: 2px solid orange;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
 }
 
 .item-home {
-    background-color:greenyellow;
+    background-color: greenyellow;
 }
 
 
-.item-catalogo{
+.item-catalogo {
     background-color: rgb(243, 42, 153);
 }
 
-.item-servicios{
-    background-color: lemonchiffon;
-}
+.item-servicios {
+    height: 280px;
+    background: #0079C1;
+    color: #FFF;
+    margin: 12px;
+    padding-top: 20px;
+    vertical-align: middle;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    border-radius: 1.5%;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    
+  }
+ 
+ 
+  .item-servicios:hover {
+    top: -7px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11),
+                0 2px 2px rgba(0,0,0,0.11),
+                0 4px 4px rgba(0,0,0,0.11),
+                0 6px 8px rgba(0,0,0,0.11),
+                0 8px 16px rgba(0,0,0,0.11);
+  }
 
-.nosotros{
+  .item-servicios>p{
+    padding: 2%;
+    
+  }
+
+.nosotros {
     grid-area: nosotros;
+    width: 100%;
     text-align: center;
     margin: 0.5%;
     padding: 0.3%;
 }
 
-.nosotros-titulo{
+.nosotros-titulo {
     text-align: center;
     width: 100%;
-    padding: 2%;
+    padding: 1%;
 }
 
-.contactenos{
+.contactenos {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .formulario {
-    
+
     width: 50%;
     text-align: center;
     padding: 2%;
 }
 
-.ubicacion{
+.ubicacion {
     width: 50%;
     background-color: peachpuff;
     border: solid 1px black;
     padding: 10%;
 }
 
-.footer{
+.footer {
     border: 2px solid slateblue;
 }
