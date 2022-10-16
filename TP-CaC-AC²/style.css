@@ -16,17 +16,14 @@ body header main {
 }
 
 main {
-    padding-bottom: 10%;
-
-    background-color: #b7dff7;
+       background-color: #b7dff7;
+       
 }
 
 header {
 
     background-color: teal;
-    padding: 0%;
 }
-
 .nave {
     width: 100%;
     display: flex;
@@ -106,25 +103,25 @@ header {
 }
 
 
-.nosotros {
-    grid-area: nosotros;
-    text-align: center;
-    color: rgb(1, 1, 80);
-    vertical-align: middle;
-}
-
-
 .grid-catalogo {
     border: 2px solid rgb(167, 195, 245);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
 }
+@media screen and (max-width: 800px) {
+    .grid-catalogo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
 
 .posventa {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    margin: 2%;
+    padding: 2%;
 
 }
 
@@ -133,6 +130,7 @@ header {
 .container-servicios {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    
 
 
 }
@@ -154,11 +152,25 @@ header {
     border-radius: 1.5%;
     font-size: 80%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
-
+.item-home>p{
+    padding:5%;
+    font-size: large;
+}
 .item-catalogo {
-    background-color: #fff;
+    
+    text-align: center;
+    border-radius: 50%;
+    margin:3%;
+}
+
+.item-catalogo:hover{
+    border:1px double rgba(128, 128, 128, 0.418);    
+   
 }
 
 .item-servicios {
@@ -179,11 +191,11 @@ header {
 
 .item-servicios:hover {
     top: -7px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
-        0 2px 2px rgba(0, 0, 0, 0.11),
-        0 4px 4px rgba(0, 0, 0, 0.11),
-        0 6px 8px rgba(0, 0, 0, 0.11),
-        0 8px 16px rgba(0, 0, 0, 0.11);
+    box-shadow: 0 1px 1px #0079C,
+        0 2px 2px #0079C,
+        0 4px 4px #0079C,
+        0 6px 8px #0079C,
+        0 8px 16px #0079C;
 }
 
 .item-servicios>h2 {
@@ -191,17 +203,14 @@ header {
     font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-
-
-
 }
 
 .nosotros {
     grid-area: nosotros;
     width: 100%;
+    color: rgb(1, 1, 80);
     text-align: center;
-    margin: 0.5%;
-    padding: 0.3%;
+   
 }
 
 .nosotros-titulo {
@@ -211,24 +220,51 @@ header {
 }
 
 .contactenos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    text-align: center;
 }
+
+
 
 .formulario {
 
-    width: 50%;
-    text-align: center;
+    text-align: left;
     padding: 2%;
 }
 
 .ubicacion {
-    width: 50%;
-    background-color: peachpuff;
-    border: solid 1px black;
-    padding: 10%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+        
 }
+
+.direccion{
+    text-align: left;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+    .contactenos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .ubicacion{
+        padding:10%;
+    }
+    .direccion{
+        text-align: center;
+        padding-bottom: 10%;
+        
+    }
+}
+
 
 .footer {
     border: 2px solid slateblue;
