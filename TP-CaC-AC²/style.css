@@ -15,28 +15,43 @@ body header main {
     width: 100%;
 }
 
+main {
+    padding-bottom: 10%;
+
+    background-color: #b7dff7;
+}
+
 header {
-    
+
     background-color: teal;
+    padding: 0%;
 }
 
 .nave {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
 
 }
 
+
+
 .logotipo {
-    border: 2px solid salmon;
     width: 10%;
+    height: 100px;
     background-image: url("./logoAC.png");
 }
 
 .img_logo {
     width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .logotipo {
+
+        width: 50%;
+    }
 }
 
 .menu {
@@ -49,6 +64,7 @@ header {
 
 .item-menu {
     width: 100%;
+    color: #fffaff;
     text-decoration: none;
     text-align: center;
     padding-top: 10%;
@@ -59,24 +75,47 @@ header {
     background-color: gold;
 }
 
+@media screen and (max-width: 800px) {
+    .menu {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .item-menu {
+
+        padding-left: 60px;
+        padding-right: 60px;
+        /* width: 100%; */
+    }
+}
+
 .grid-home {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 'nosotros nosotros nosotros'
-                        'venta posventa financiacion';
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: ' nosotros nosotros nosotros'
+        'venta posventa financiacion';
 }
 
-.grid-item {
-    border: 2px solid darkblue;
-    border-radius: 20px;
-    background-color: #fff;
+@media screen and (max-width: 800px) {
+    .grid-home {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+
+.nosotros {
+    grid-area: nosotros;
     text-align: center;
-
+    color: rgb(1, 1, 80);
+    vertical-align: middle;
 }
+
 
 .grid-catalogo {
-    border: 2px solid fuchsia;
+    border: 2px solid rgb(167, 195, 245);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -85,64 +124,77 @@ header {
 .posventa {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    
-    
-    
-}
-.aside{
-    
-    border: 2px solid rgb(9, 226, 74);
-      
+    margin: 2%;
+
 }
 
-.container-servicios{
-    
-    border: 2px solid orange;
+.aside {}
+
+.container-servicios {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
+    grid-template-columns: repeat(4, 1fr);
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .container-servicios {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
 .item-home {
-    background-color: greenyellow;
+    background-color: rgb(38, 148, 192);
+    height: 280px;
+    border: none;
+    color: rgb(1, 1, 80);
+    margin: 2%;
+    border-radius: 1.5%;
+    font-size: 80%;
+    text-align: center;
 }
 
 
 .item-catalogo {
-    background-color: rgb(243, 42, 153);
+    background-color: #fff;
 }
 
 .item-servicios {
-    height: 280px;
+    height: 180px;
+    border: none;
     background: #0079C1;
     color: #FFF;
-    margin: 12px;
-    padding-top: 20px;
-    vertical-align: middle;
+    margin: 2%;
     position: relative;
     top: 0;
     transition: top ease 0.5s;
     border-radius: 1.5%;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 80%;
     text-align: center;
-    
-  }
- 
- 
-  .item-servicios:hover {
-    top: -7px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.11),
-                0 2px 2px rgba(0,0,0,0.11),
-                0 4px 4px rgba(0,0,0,0.11),
-                0 6px 8px rgba(0,0,0,0.11),
-                0 8px 16px rgba(0,0,0,0.11);
-  }
 
-  .item-servicios>p{
-    padding: 2%;
-    
-  }
+}
+
+
+.item-servicios:hover {
+    top: -7px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+        0 2px 2px rgba(0, 0, 0, 0.11),
+        0 4px 4px rgba(0, 0, 0, 0.11),
+        0 6px 8px rgba(0, 0, 0, 0.11),
+        0 8px 16px rgba(0, 0, 0, 0.11);
+}
+
+.item-servicios>h2 {
+    padding-top: 30%;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+
+
+}
 
 .nosotros {
     grid-area: nosotros;
@@ -180,4 +232,6 @@ header {
 
 .footer {
     border: 2px solid slateblue;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
