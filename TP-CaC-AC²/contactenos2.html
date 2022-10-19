@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC²</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="./js/form.js"></script>-->
+    
+</head>
+
+
+<body>
+    <header>
+        <nav class="nave">
+            <a class="logotipo" href="index.html"><img class="img_logo" src="logoAC.png" alt="logo-de-la-agencia"></a>
+
+            <div class="menu">
+                <a class="item-menu" href="index.html">INICIO</a>
+                <a class="item-menu" href="catalogo.html">CATALOGO</a>
+                <a class="item-menu" href="servicios.html">SERVICIOS</a>
+                <a class="item-menu" href="contactenos.html">CONTACTENOS</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2 class="nosotros-titulo">AC² Agencia de Autos</h2>
+        <div class="contactenos">
+            <div class="formulario">
+
+                <h3>CONTACTO</h3>
+                <form name= "formulario" onsubmit="return validar();"action="mailto:mail@gmail.com" method="post" enctype="text/plain">
+                    Nombre <input type="text" id="nombre" name="nombre"><!-- size="30" maxlength="100">-->
+                    <br>
+                    E-mail <input type='text' name='email' id='email'/><!--<input type="email" id="mail" name="mail" size="25" maxlength="100" value="" required>-->
+                    <br>
+                    Teléfono <input type='text' id="telefono" name="telefono" size="20" maxlength="60">
+                    <br>
+
+                    <br>
+                    Motivo de consulta
+                    <br>
+                    <select name="utilizacion">
+                        <option value="1">Compra
+                        <option value="2">Servicios
+                        <option value="3">Financiación
+                        <option value="4">Otros
+                    </select>
+                    <br>
+                    <br>
+                    Comentarios
+                    <br>
+                    <textarea cols="30" rows="7" name="comentarios"></textarea>
+                    <br>
+                    <br>
+                    <input type="checkbox" name="recibir_info" checked> Deseo recibir el promociones y novedades por
+                    mail.
+                    <br>
+                    <br>
+                    <button>Enviar Formulario</button><!--<input type="submit" value="Enviar formulario">-->
+                    <br>
+                    <br>
+                    <button type="reset" >Borrar todo</button><!--<input type="Reset" value="Borrar todo">-->
+                </form>
+                <script type='text/javascript'>
+                    function validar(){
+                
+                    /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
+                    y que se convertirá en false(falso) cuando la condición no se cumpla*/
+                    var todo_correcto = true;
+                    var msg = "Debes revisar el contenido de los campos:\n";
+                    
+                    /*El primer campo a comprobar es el del nombre. Lo traemos por id y verificamos
+                    la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
+                    para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
+                    devolverá false.*/
+                    
+                    if(document.getElementById('nombre').value.length < 2 ){
+                        todo_correcto = false;
+                        msg += "- Nombre\n";
+                    }
+                    var expresion = /^[a-z][\w.-]+@\w[\w.-]+\.[\w.-]*[a-z][a-z]$/i;
+                    var email = document.formulario.email.value;
+                    if (!expresion.test(email)){
+                        todo_correcto = false;
+                        msg += "- E-mail\n";
+                    }
+                    var expresion2 = /^[0-9]{8,15}$/;
+                    var telefono = document.formulario.telefono.value;
+                    if (!expresion2.test(telefono)){
+                        todo_correcto = false;
+                        msg += "- Teléfono\n";
+                    }
+                    
+                    
+                    /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
+                    todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
+                    al usuario de que algunos datos ingresados no son los que esperamos.*/
+                    if(!todo_correcto){
+                    alert('Algunos campos no están correctos.\n ' + msg);
+                    }
+                    
+                    return todo_correcto;
+                    }
+                    
+                
+                     /*const email = document.getElementById("mail");
+                
+                email.addEventListener("input", function (event) {
+                  if (email.validity.typeMismatch) {
+                    email.setCustomValidity("Master, I am expecting an e-mail address!");
+                  } else {
+                    email.setCustomValidity("");
+                  }
+                }); 
+                
+                /*const telefono = document.getElementById("mail");
+                
+                email.addEventListener("input", function (event) {
+                  if (email.validity.patternMismatch) {
+                    email.setCustomValidity("Master, I am expecting an telefono!");
+                  } else {
+                    email.setCustomValidity("");
+                  }
+                });*/
+                
+                </script>
+            </div>
+
+            <div class="ubicacion">
+                <div class="direccion">
+                    <p>Dirección: Sarasas 666</p>
+                    <p>Teléfono: 6666-6666</p>
+                    <p>Whatsapp: 7777-7777</p>
+                </div>
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.682102033412!2d-58.429865685019905!3d-34.63747298045076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbae3986b485%3A0xfbab8cb8a146909!2sSaraza%20666%2C%20C1424CWF%20CABA!5e0!3m2!1ses-419!2sar!4v1665891037901!5m2!1ses-419!2sar"
+                        width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright 2022 - AC² - Para Codo a Codo Fullstack Python 2022</p>
+    </footer>
+</body>
+
+
+</html>
