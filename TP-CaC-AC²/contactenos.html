@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AC²</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="./js/contactenos.js"></script>
+    
 </head>
 
 
@@ -31,17 +30,16 @@
             <div class="formulario">
 
                 <h3>CONTACTO</h3>
-                <form action="mailto:mail@gmail.com" method="post" enctype="text/plain">
-                    Nombre <input type="text" name="nombre" size="30" maxlength="100">
+                <form name= "formulario" onsubmit="return validar();"action="mailto:mail@gmail.com" method="post" enctype="text/plain">
+                    Nombre  <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Perez" size="30" maxlength="100">
                     <br>
-                    Email <input type="text" name="email" size="25" maxlength="100" value="">
+                    E-mail*  <input type='email' name='email' id='email'  placeholder="ejemplo@ac2automotores.com" size="30" maxlength="100" value="" required /><!--<input type="email" id="mail" name="mail" size="25" maxlength="100" value="" required>-->
                     <br>
-                    Teléfono <input type="text" name="telefono" size="20" maxlength="60">
+                    Teléfono* <input type='text' id="telefono" name="telefono" placeholder="Ej: 01155446677" size="30" maxlength="60" required>
                     <br>
-
-                    <br>
+                    *Campos obligatorios
+                    <br><br>
                     Motivo de consulta
-                    <br>
                     <select name="utilizacion">
                         <option value="1">Compra
                         <option value="2">Servicios
@@ -59,11 +57,10 @@
                     mail.
                     <br>
                     <br>
-                    <input type="submit" value="Enviar formulario">
-                    <br>
-                    <br>
-                    <input type="Reset" value="Borrar todo">
+                    <button>Enviar Formulario</button><!--<input type="submit" value="Enviar formulario">-->
+                    <button type="reset" >Borrar todo</button><!--<input type="Reset" value="Borrar todo">-->
                 </form>
+                
             </div>
 
             <div class="ubicacion">
