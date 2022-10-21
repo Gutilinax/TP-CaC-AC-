@@ -22,7 +22,7 @@ main {
 
 header {
 
-    background-color: teal;
+    background-color: #b7dff7;
 }
 .nave {
     width: 100%;
@@ -36,8 +36,9 @@ header {
 
 .logotipo {
     width: 10%;
-    height: 100px;
-    background-image: url("./logoAC.png");
+    height: 0.30em;
+    /* background-image: url("./logoAC.png"); */
+    
 }
 
 .img_logo {
@@ -48,6 +49,7 @@ header {
     .logotipo {
 
         width: 50%;
+        height: 100%;
     }
 }
 
@@ -61,15 +63,18 @@ header {
 
 .item-menu {
     width: 100%;
-    color: #fffaff;
+    color: #0f4c72;
     text-decoration: none;
     text-align: center;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
 }
 
 .item-menu:hover {
-    background-color: gold;
+    background-color:#0f4c72;
+    color: #fffaff;
+   
 }
 
 @media screen and (max-width: 800px) {
@@ -87,6 +92,7 @@ header {
 }
 
 .grid-home {
+    padding-top: 3%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
