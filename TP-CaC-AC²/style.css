@@ -16,13 +16,13 @@ body header main {
 }
 
 main {
-       background-color: #b7dff7;
+       background-color: #d9f4fb;/*#b7dff7;*/
        
 }
 
 header {
 
-    background-color: #b7dff7;
+    background-color: #d9f4fb; /*#b7dff7;*/
 }
 .nave {
     width: 100%;
