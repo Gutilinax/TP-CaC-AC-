@@ -125,7 +125,6 @@ header {
 
 }
 
-.aside {}
 
 .container-servicios {
     display: grid;
@@ -191,11 +190,11 @@ header {
 
 .item-servicios:hover {
     top: -7px;
-    box-shadow: 0 1px 1px #0079C,
-        0 2px 2px #0079C,
-        0 4px 4px #0079C,
-        0 6px 8px #0079C,
-        0 8px 16px #0079C;
+    box-shadow: 0 1px 1px #7a7b7b,
+        0 2px 2px #7a7b7b,
+        0 4px 4px #7a7b7b,
+        0 6px 8px #7a7b7b,
+        0 8px 16px #7a7b7b;
 }
 
 .item-servicios>h2 {
