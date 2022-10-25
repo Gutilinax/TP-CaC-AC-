@@ -1,8 +1,15 @@
 .red{
-	position: fixed;
-	top: 200px;
+	position: absolute;
+	top: 30%;
 	z-index: 100;
 	left: 0;
+}
+@media screen and (max-width: 800px) {
+	.red{
+		
+		top:50%;
+		left: 0;
+	}
 }
 #facebook a{
 	background: #3b5998;

@@ -23,6 +23,7 @@ main {
 header {
 
     background-color: #d9f4fb; /*#b7dff7;*/
+    
 }
 .nave {
     width: 100%;
@@ -110,7 +111,7 @@ header {
 
 
 .grid-catalogo {
-    border: 2px solid rgb(167, 195, 245);
+    /* border: 2px solid rgb(167, 195, 245); */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
@@ -215,6 +216,7 @@ header {
     width: 100%;
     color: rgb(1, 1, 80);
     text-align: center;
+    padding: 5% 20% 5% 20%;
    
 }
 
@@ -272,7 +274,7 @@ header {
 
 
 .footer {
-    border: 2px solid slateblue;
+    background-color: #d9f4fb;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
