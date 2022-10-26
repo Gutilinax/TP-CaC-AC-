@@ -174,9 +174,13 @@ header {
     margin:3%;
 }
 
-.item-catalogo:hover{
-    border:1px double rgba(128, 128, 128, 0.418);    
-   
+.imagen{
+    transition: transform 0.2ms
+}
+.imagen:hover{
+    
+    transform: scale(1.5);
+
 }
 
 .item-servicios {
