@@ -111,7 +111,7 @@ header {
 
 
 .grid-catalogo {
-    /* border: 2px solid rgb(167, 195, 245); */
+    padding-top:5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
